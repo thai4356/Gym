@@ -10,7 +10,7 @@ session_start();
 
 
     <!--Bootstrap CSS-->
-    <link rel="stylesheet" type="text/css" href="Public/assetsHomepage/css/index.css">
+<!--    <link rel="stylesheet" type="text/css" href="Public/assetsHomepage/css/index.css">-->
     <link rel="stylesheet" type="text/css" href="Public/assetsHomepage/css/index2.css">
     <link rel="stylesheet" type="text/css" href="Public/assetsHomepage/css/style.css">
     <link rel="stylesheet" type="text/css" href="Public/assetsHomepage/css/slick.css">

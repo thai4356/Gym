@@ -690,7 +690,7 @@
 <!--Team Start-->
 <section class="main-team">
     <div class="team-overlay-bg animate-this" style="transform: translateX(15.9991px) translateY(-9.99986px);">
-        <img src="assets/images/team-overlay-bg.png" alt="Overlay">
+<!--        <img src="assets/images/team-overlay-bg.png" alt="Overlay">-->
     </div>
     <div class="container">
         <div class="row">

@@ -1,25 +1,27 @@
-<div id="content_left">
+<div id="content_left" class="content_left">
     <div class="left1">
         <h3>CHỨC NĂNG</h3>
-        <p><a href="?module=<?=$module?>&act=them">Thêm Sản phẩm</a></p>
-        <p><a href="?module=<?=$module?>">Danh sách Sản phẩm</a></p>
-        <p><a href="?module=<?=$module?>">Thống kê</a></p>
+        <div class="topnav">
+        <a href="?module=<?=$module?>&act=them">Thêm Sản phẩm</a><a>|</a>
+        <a href="?module=<?=$module?>">Danh sách Sản phẩm</a><a>|</a>
+        <a href="?module=<?=$module?>">Thống kê</a>
+        </div>
     </div>
-
 </div>
-<div id="content_right">
+<hr/>
+<div id="content_right" class="content_right">
     <h1> QUẢN LÝ SẢN PHẨM</h1>
     <div id="Right_Search">
         <?php
         $tukhoa = isset($_REQUEST["tTukhoa"])? $_REQUEST["tTukhoa"]:"";
         $cat_id = isset($_REQUEST["cat_id"])?$_REQUEST["cat_id"]:0;
         ?>
-        <form name="fTimkiem" id="fTiemkiem" action="">
+        <form name="fTimkiem" id="fTiemkiem" action="" class="fTimkiem">
             <input type="hidden" name="module" value="sanpham">
             <input type="hidden" name="act" value="timkiem">
-            <span>Từ khóa:</span><input type="text" name="tTukhoa" id="tTukhoa" value="<?=$tukhoa?>">
-            <span>Nhóm sản phẩm:</span>
-            <select name="cat_id" id="cat_id">
+            <span>Từ khóa:</span><input type="text" name="tTukhoa" class="tTukhoa" id="tTukhoa" style="margin-left: 10px" value="<?=$tukhoa?>">
+            <span style="padding-left: 20px">Nhóm sản phẩm:</span>
+            <select name="cat_id" id="cat_id" style="margin-left:10px " class="cat_id">
                 <option value="0">Tất tả nhóm SP</option>
                 <?php
                 require_once("Model/clsCategory.php");
@@ -30,11 +32,11 @@
                 ShowOptions($nps->data,"id","cat_name",$cat_id);
                 ?>
             </select>
-            <input type="submit" name="bSearch" id="bSearch" value="Tìm kiếm">
+            <input type="submit" name="bSearch" id="bSearch" value="Tìm kiếm" style="margin-left: 10px" class="bSearch">
         </form>
     </div>
     <div id="right_detail">
-        <table width="100%" border="1" class="Content_Table" cellpadding="0" cellspacing="0">
+        <table width="98%" border="1" class="Content_Table" cellpadding="0" cellspacing="0">
             <tr>
                 <td> id </td>
                 <td> Product name </td>

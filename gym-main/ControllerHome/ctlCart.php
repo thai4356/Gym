@@ -75,5 +75,4 @@ else
 {
     require_once("ViewsUser/vCart.php");
 }
-
 ?>

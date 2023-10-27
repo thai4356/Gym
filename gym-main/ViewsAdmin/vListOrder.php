@@ -1,20 +1,21 @@
-<div id="content_left">
+<div id="content_left" class="content_left">
     <div class="left1">
-        <h3>CHỨC NĂNG</h3>
-        <p><a href="?module=<?=$module?>">Danh sách Hóa đơn</a></p>
-        <p><a href="?module=<?=$module?>">Thống kê</a></p>
+        <div class="topnav">
+            <h3>CHỨC NĂNG</h3>
+            <a href="?module=<?=$module?>">Danh sách Hóa đơn</a><a>|</a>
+            <a href="?module=<?=$module?>">Thống kê</a>
+        </div>
     </div>
-
 </div>
-<div id="content_right">
+<hr/>
+<div id="content_right" class="content_right">
     <h1> QUẢN LÝ HÓA ĐƠN</h1>
-    <h2> DANH SÁCH HÓA ĐƠN</h2>
     <div id="right_detail">
         <?php
         if($ketqua)
         {
             ?>
-            <table width="100%" border="1" class="Content_Table" cellpadding="0" cellspacing="0">
+            <table width="98%" border="1" class="Content_Table" cellpadding="0" cellspacing="0">
                 <tr>
                     <td>Mã hd</td>
                     <td>Họ tên</td>

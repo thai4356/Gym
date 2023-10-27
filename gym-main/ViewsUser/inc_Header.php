@@ -27,7 +27,7 @@
                                 <i class="menu-background bottom"></i>
                                 <ul class="menu">
                                     <li >
-                                        <a href="indexUser.php" title="Home">Home</a>
+                                        <a href="index.php" title="Home">Home</a>
                                     </li>
                                     <!--                                    <li><a href="indexUserProduct.php">Our products</a></li>-->
                                     <li>

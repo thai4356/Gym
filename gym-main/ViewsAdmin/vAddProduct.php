@@ -1,18 +1,18 @@
-<div id="content_left">
+<div id="content_left" class="content_left">
     <div class="left1">
         <h3>CHỨC NĂNG</h3>
-        <p><a href="?module=<?=$module?>&act=them">Thêm Sản phẩm</a></p>
-        <p><a href="?module=<?=$module?>">Danh sách Sản phẩm</a></p>
-        <p><a href="?module=<?=$module?>">Thống kê</a></p>
+        <div class="topnav">
+        <a href="?module=<?=$module?>">Danh sách Sản phẩm</a><a>|</a>
+        <a href="?module=<?=$module?>">Thống kê</a>
+        </div>
     </div>
-
 </div>
+<hr/>
 <div id="content_right">
-    <h1> QUẢN LÝ SẢN PHẨM</h1>
-    <h2> THÊM SẢN PHẨM</h2>
+    <h1> THÊM SẢN PHẨM</h1>
     <div id="right_detail">
         <form name="form1" method="post" action="?module=<?=$module?>&act=xulythem" enctype="multipart/form-data">
-            <table width="750" border="0" align="center" cellpadding="0" cellspacing="0">
+            <table class="table_contents"  width="750" border="0" align="center" cellpadding="0" cellspacing="0">
                 <tr>
                     <td width="120" height="30">Category:</td>
                     <td width="630">

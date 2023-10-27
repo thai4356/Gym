@@ -27,7 +27,7 @@
                             <div class="class-box-icon">
                                 <img src="Public/assetsHomepage/images/class-icon-1.png">
                             </div>
-                            <a href="?module=chitietsanpham&manhom=<?=$row["cat_id"]?>&masp=<?=$row["id"]?>"><h3 class="h3-title"><?=$row["title"]?></h3></a>
+                            <a href="?module=chitietsanpham&&masp=<?=$row["id"]?>"><h3 class="h3-title"><?=$row["title"]?></h3></a>
                         </div>
                         <p>Suspendisse nisi libero, cursus ac magna sit amet, fermentum imperdiet nisi.</p>
                         <p>Price: <?=number_format($row["price"])?>$</p>
@@ -98,7 +98,7 @@
 <!--Team Start-->
 <section class="main-team">
     <div class="team-overlay-bg animate-this" style="transform: translateX(15.9991px) translateY(-9.99986px);">
-        <img src="assets/images/team-overlay-bg.png" alt="Overlay">
+<!--        <img src="assets/images/team-overlay-bg.png" alt="Overlay">-->
     </div>
     <div class="container">
         <div class="row">

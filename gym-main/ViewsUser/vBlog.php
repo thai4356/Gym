@@ -22,9 +22,9 @@
                         </div>
                     </div>
                     <div class="blog-content">
-                        <a href="blog-detail.html"><h3 class="h3-title">Going to the gym for the first time</h3></a>
+                        <a href="https://www.puregym.com/blog/the-best-gym-workout-plan-for-gaining-muscle/"><h3 class="h3-title">Going to the gym for the first time</h3></a>
                         <p>Praesent id ipsum pellentesque lectus dapibus condimentum curabitur eget risus quam. In hac habitasse platea dictumst.</p>
-                        <a href="blog-detail.html" class="sec-btn-link">Read More</a>
+                        <a href="https://www.puregym.com/blog/the-best-gym-workout-plan-for-gaining-muscle/" class="sec-btn-link">Read More</a>
                     </div>
                 </div>
             </div>
@@ -37,9 +37,9 @@
                         </div>
                     </div>
                     <div class="blog-content">
-                        <a href="blog-detail.html"><h3 class="h3-title">Parturient accumsan cacus pulvinar magna</h3></a>
+                        <a href="https://www.puregym.com/blog/the-best-gym-workout-plans-for-beginners/"><h3 class="h3-title">Parturient accumsan cacus pulvinar magna</h3></a>
                         <p>Praesent id ipsum pellentesque lectus dapibus condimentum curabitur eget risus quam. In hac habitasse platea dictumst.</p>
-                        <a href="blog-detail.html" class="sec-btn-link">Read More</a>
+                        <a href="https://www.puregym.com/blog/the-best-gym-workout-plans-for-beginners/" class="sec-btn-link">Read More</a>
                     </div>
                 </div>
             </div>
@@ -52,9 +52,9 @@
                         </div>
                     </div>
                     <div class="blog-content">
-                        <a href="blog-detail.html"><h3 class="h3-title">Risus purus namien parturient accumsan cacus</h3></a>
+                        <a href="https://www.puregym.com/blog/how-many-calories-you-should-be-eating-to-lose-weight/"><h3 class="h3-title">Risus purus namien parturient accumsan cacus</h3></a>
                         <p>Praesent id ipsum pellentesque lectus dapibus condimentum curabitur eget risus quam. In hac habitasse platea dictumst.</p>
-                        <a href="blog-detail.html" class="sec-btn-link">Read More</a>
+                        <a href="https://www.puregym.com/blog/how-many-calories-you-should-be-eating-to-lose-weight/" class="sec-btn-link">Read More</a>
                     </div>
                 </div>
             </div>

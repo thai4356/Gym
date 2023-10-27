@@ -9,9 +9,9 @@
             <input type="hidden" name="module" value="sanpham">
             <input type="hidden" name="act" value="timkiem">
             <span>Từ khóa:</span><input type="text" name="tTukhoa" id="tTukhoa" value="<?=$tukhoa?>">
-            <span>Nhóm sản phẩm:</span>
+            <span>Contact info</span>
             <select name="cat_id" id="cat_id">
-                <option value="0">Tất tả nhóm SP</option>
+                <option value="0">All</option>
                 <?php
                 require_once("Model/clsContact.php");
                 $contactInfo = new clsContact();

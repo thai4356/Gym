@@ -66,7 +66,7 @@ session_start();
                 }
                 else if($module=="chitietsanpham")
                 {
-                    require("ControllersHome/ctlChitietSanpham.php");
+                    require("ControllerHome/ctlDetail.php");
                 }
                 else if($module=="cart")
                 {

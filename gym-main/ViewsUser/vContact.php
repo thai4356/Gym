@@ -2,7 +2,7 @@
 <!--Appointment Start-->
 <section class="main-appointment">
     <div class="appointment-overlay-bg animate-this" style="transform: translateX(19.9542px) translateY(-9.95155px);">
-        <img src="assets/images/appointment-overlay-bg.png" alt="Overlay">
+<!--        <img src="assets/images/appointment-overlay-bg.png" alt="Overlay">-->
     </div>
     <div class="container">
         <div class="row align-items-center">
@@ -69,3 +69,5 @@
         </div>
     </div>
 </section>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d58345.8370356026!2d90.39051679999999!3d23.938690100000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1603517982898!5m2!1sen!2sbd" width="100%" height="570" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>

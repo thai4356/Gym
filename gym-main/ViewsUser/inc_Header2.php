@@ -53,13 +53,14 @@
                                         <a href="?module=blog" class="navbar-link" title="Blog" data-nav-link>Blog</a>
                                     </li>
                                     <li><a href="?module=contact">Contact Us</a></li>
+                                    <li><a href="Logout.php">Logout</a></li>
                                 </ul>
                             </div>
                         </nav>
 
                         <div class="black-shadow"></div>
                         <div class="header-btn">
-                            <a ?module=cart class="sec-btn">Your cart</a>
+                            <a href="?module=cart" class="sec-btn">Your cart</a>
                         </div>
                     </div>
                 </div>

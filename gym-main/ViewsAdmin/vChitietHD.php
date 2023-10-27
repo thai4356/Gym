@@ -1,14 +1,15 @@
-<div id="content_left">
+<div id="content_left" class="content_left">
     <div class="left1">
+        <div class="topnav">
         <h3>CHỨC NĂNG</h3>
-        <p><a href="?module=<?=$module?>">Danh sách Hóa đơn</a></p>
-        <p><a href="?module=<?=$module?>">Thống kê</a></p>
+            <a href="?module=<?=$module?>">Danh sách Hóa đơn</a><a>|</a>
+            <a href="?module=<?=$module?>">Thống kê</a>
+        </div>
     </div>
-
 </div>
-<div id="content_right">
-    <h1> QUẢN LÝ HÓA ĐƠN</h1>
-    <h2> DANH SÁCH HÓA ĐƠN</h2>
+<hr/>
+<div id="content_right" class="content_right">
+    <h1 style="margin-left: 2px"> DANH SÁCH HÓA ĐƠN</h1>
     <div id="right_detail">
         <?php
         $trangthai="";
@@ -47,7 +48,7 @@
 						<?=number_format($tongtien)?> VNĐ</span>
         </p>
         <h3> Danh sách mặt hàng</h3>
-        <table width="100%" border="1" class="Content_Table" cellpadding="0" cellspacing="0">
+        <table width="98%" border="1" class="Content_Table" cellpadding="0" cellspacing="0">
             <tr>
                 <td>STT</td>
                 <td>Mã SP</td>

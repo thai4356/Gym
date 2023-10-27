@@ -1,17 +1,19 @@
-<div id="content_left">
+<div id="content_left" class="content_left">
     <div class="left1">
         <h3>CHỨC NĂNG</h3>
-        <p><a href="?module=<?=$module?>&act=them">Thêm Nhóm SP</a></p>
-        <p><a href="?module=<?=$module?>">Danh sách Nhóm SP</a></p>
-        <p><a href="?module=<?=$module?>">Thống kê</a></p>
+        <div class="topnav">
+        <a href="?module=<?=$module?>&act=them">Thêm Nhóm SP</a><a>|</a>
+        <a href="?module=<?=$module?>">Danh sách Nhóm SP</a><a>|</a>
+        <a href="?module=<?=$module?>">Thống kê</a>
+        </div>
     </div>
 
 </div>
-<div id="content_right">
-    <h1> QUẢN LÝ NHÓM SẢN PHẨM</h1>
-    <h2> DANH SÁCH NHÓM SẢN PHẨM</h2>
+<hr/>
+<div id="content_right" class="content_right">
+    <h1> DANH SÁCH NHÓM SẢN PHẨM</h1>
     <div id="right_detail">
-        <table width="100%" border="1" class="Content_Table" cellpadding="0" cellspacing="0">
+        <table width="98%" border="1" class="Content_Table" cellpadding="0" cellspacing="0">
             <tr>
                 <td> id </td>
                 <td> Tên </td>

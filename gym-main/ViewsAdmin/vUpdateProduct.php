@@ -9,22 +9,24 @@ else
     <div id="content_left">
         <div class="left1">
             <h3>CHỨC NĂNG</h3>
-            <p><a href="?module=<?=$module?>&act=them">Thêm Sản phẩm</a></p>
-            <p><a href="?module=<?=$module?>">Danh sách Sản phẩm</a></p>
-            <p><a href="?module=<?=$module?>#">Thống kê</a></p>
+            <div class="topnav">
+            <a href="?module=<?=$module?>&act=them">Thêm Sản phẩm</a><a>|</a>
+            <a href="?module=<?=$module?>">Danh sách Sản phẩm</a><a>|</a>
+            <a href="?module=<?=$module?>#">Thống kê</a>
+            </div>
         </div>
 
     </div>
-    <div id="content_right">
-        <h1> QUẢN LÝ SẢN PHẨM</h1>
-        <h2> SỬA SẢN PHẨM</h2>
+    <hr/>
+    <div id="content_right" >
+        <h1> SỬA SẢN PHẨM</h1>
         <div id="right_detail">
             <?php
             $row = $sanpham->data;
             ?>
             <form name="form1" method="post" action="?module=<?=$module?>&act=xulysua"  enctype="multipart/form-data">
                 <input type="hidden" name="id" id="id" value="<?=$id?>">
-                <table width="750" border="0" align="center" cellpadding="0" cellspacing="0">
+                <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0" class="table_contents">
                     <tr>
                         <td width="120" height="30">Category:</td>
                         <td width="630">
