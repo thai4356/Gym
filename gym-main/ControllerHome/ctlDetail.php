@@ -11,7 +11,7 @@ if(isset($_REQUEST["manhom"]))
     $manhom = $_REQUEST["manhom"];
 if(isset($_REQUEST["masp"]))
     $masp = $_REQUEST["masp"];
-//tạo đối tượng clsSanpham
+
 $sanpham = new clsSanpham();
 
 if($masp > 0)

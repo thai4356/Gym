@@ -13,7 +13,7 @@ function UploadFile($inputName, $Folder)
     //kiểm tra đuôi tệp phải là jpg, png, gif
     $arr = explode(".",$filename);//tách chuỗi thành mảng các chuỗi con với dấu chấm
     $file_ext = strtolower(end($arr));//lấy phần tử cuối chính là đuôi tệp và chuyển thành chữ thường
-    $list_anh = array("jpg","png","gif","jpeg");
+    $list_anh = array("jpg","png","gif","jpeg","webp");
     if(in_array($file_ext, $list_anh)==false)//nếu đuôi tệp không có trong danh sách tệp ảnh
         return "";
     move_uploaded_file($tmp_name, "$Folder/$filename");

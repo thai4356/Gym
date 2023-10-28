@@ -107,5 +107,12 @@ class clsProduct
             $this->data = $this->db->pdo_stm->fetchAll();
         return $ketqua;//trả về $ketqua: TRUE/FALSE
     }
+    function XoaSanpham($id)
+    {
+        $sql = "DELETE FROM sanpham WHERE id=?";
+        $data[] = $id;
+        $ketqua = $this->db->ThucthiSQL($sql,$data);
+        return $ketqua;
+    }
 }
 ?>
