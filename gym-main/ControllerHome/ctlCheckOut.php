@@ -32,14 +32,14 @@ else
             $giasp = $sanpham->data["price"];//lấy giá sản phẩm
             $ketqua = $hoadon->ThemChitietHoadon($mahd,$masp,$soluong,$giasp);
             if($ketqua==FALSE)
-                $thongbao ="LỖI THÊM CHI TIẾT HÓA ĐƠN";
+                $thongbao ="Something went wrong";
             else
             {
                 unset($_SESSION["cart"]);//xóa giỏ hàng
                 $thongbao ="Thanks for your purchase";
                 $thongbao .= "<br>We will contact back as soon as possible";
-                $thongbao .= "<br>Account: 0011223344";
-                $thongbao .= "<br>Bank: BIDV";
+                $thongbao .= "<br>Account: 123456789";
+                $thongbao .= "<br>Bank: Techcombank";
             }
         }
     }

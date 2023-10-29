@@ -22,7 +22,7 @@ if($masp > 0)
 else
 {
     $link_tieptuc="index.php";
-    $thongbao = "id sản phẩm không hợp lệ";
+    $thongbao = "Id not valid";
     require("Views/vKetqua.php");
 }
 ?>

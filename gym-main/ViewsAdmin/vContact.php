@@ -1,51 +1,154 @@
-<div id="content_right">
-    <h1> Contact</h1>
-    <div id="Right_Search">
+<div style="padding: 20px;20px;background-color: #eee">
+    <div class="card mb-4">
+        <!-- HTML !-->
         <?php
-        $tukhoa = isset($_REQUEST["tTukhoa"])? $_REQUEST["tTukhoa"]:"";
-        $cat_id = isset($_REQUEST["cat_id"])?$_REQUEST["cat_id"]:0;
+        require_once("Model/clsContact.php");
+        $contactInfo = new clsContact();
+        //lấy nhóm SP tất cả trạng thái, sắp xếp theo thứu tự tăng dần
+        $contactInfo->showComment();
         ?>
-        <form name="fTimkiem" id="fTiemkiem" action="">
-            <input type="hidden" name="module" value="sanpham">
-            <input type="hidden" name="act" value="timkiem">
-            <span>Từ khóa:</span><input type="text" name="tTukhoa" id="tTukhoa" value="<?=$tukhoa?>">
-            <span>Contact info</span>
-            <select name="cat_id" id="cat_id">
-                <option value="0">All</option>
-                <?php
-                require_once("Model/clsContact.php");
-                $contactInfo = new clsContact();
-                //lấy nhóm SP tất cả trạng thái, sắp xếp theo thứu tự tăng dần
-                $contactInfo->showComment();
-                ?>
-            </select>
-            <input type="submit" name="bSearch" id="bSearch" value="Tìm kiếm">
-        </form>
-    </div>
-    <div id="right_detail">
-        <table width="100%" border="1" class="Content_Table" cellpadding="0" cellspacing="0">
-            <tr>
-                <td> id </td>
-                <td> customer name </td>
-                <td> content </td>
-                <td> date </td>
-            </tr>
-            <?php
-            $rows = $contactInfo->data;
-            foreach($rows as $row)
-            {
-                ?>
+        <div class="card-header" style="background-color: rgba(125,161,189,0.83)">
+            <i class="fas fa-table me-1"></i>
+            DataTable Example
+        </div>
+        <div class="card-body">
+
+            <a class="button-46" role="button" style="max-width: 8%;height: 10px;float: right;margin-left: 2%;padding: 18.9px" data-bs-toggle="modal" data-bs-target="#exampleModal">Add</a>
+            <a class="button-46" role="button" style="width: 8%;height: 10px;float: right;margin-left: 6%;padding: 18.9px" href="?module=<?=$module?>">List</a>
+            <table id="datatablesSimple">
+
+                <thead>
                 <tr>
-                    <td> <?=$row["id"]?> </td>
-                    <td> <?=$row["ten"]?> </td>
-                    <td> <?=$row["content"]?> </td>
-                    <td> <?=$row["date"]?> </td>
-<!--                    <td> <a href="?module=--><?php //=$module?><!--&act=xoa&id=--><?php //=$row["id"]?><!--"-->
-<!--                             onClick="return confirm('Chắc chắn xóa?');"> Xóa </a> </td>-->
+                    <th> Id </th>
+                    <th> Name </th>
+                    <th> Content </th>
+                    <th> Date </th>
+
                 </tr>
+                </thead>
+                <tfoot>
+                <tr>
+                    <th> Id </th>
+                    <th> Name </th>
+                    <th> Content </th>
+                    <th> Date </th>
+
+                </tr>
+                </tfoot>
+                <tbody>
                 <?php
-            }
-            ?>
-        </table>
+                $rows = $contactInfo->data;
+                foreach($rows as $row)
+                {
+
+
+                    ?>
+                    <tr>
+                        <td> <?=$row["id"]?> </td>
+                        <td> <?=$row["ten"]?> </td>
+                        <td> <?=$row["content"]?> </td>
+                        <td> <?=$row["date"]?> </td>
+
+                    <?php
+                }
+                ?>
+
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
+
+
+<style>
+
+
+    /* CSS */
+    .button-46 {
+        align-items: center;
+        background-color: rgba(240, 240, 240, 0.26);
+        border: 1px solid #DFDFDF;
+        border-radius: 16px;
+        box-sizing: border-box;
+        color: #000000;
+        cursor: pointer;
+        display: flex;
+        font-family: Inter, sans-serif;
+        font-size: 18px;
+        justify-content: center;
+        line-height: 28px;
+        max-width: 100%;
+        padding: 14px 22px;
+        text-decoration: none;
+        transition: all .2s;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: 100%;
+    }
+
+    .button-46:active,
+    .button-46:hover {
+        outline: 0;
+    }
+
+    .button-46:hover {
+        background-color: #FFFFFF;
+        border-color: rgba(0, 0, 0, 0.19);
+    }
+
+    @media (min-width: 768px) {
+        .button-46 {
+            font-size: 20px;
+
+            padding: 14px 16px;
+        }
+    }
+</style>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"  >
+    <div class="modal-dialog modal-dialog-centered" >
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Add product</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form name="form1" method="post" action="?module=<?=$module?>&act=xulythem">
+                    <table class="table_contents" width="400" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td width="120" height="30">Category name:</td>
+                            <td width="380"><input type="text" name="t1" id="t1"></td>
+                        </tr>
+                        <tr>
+                            <td height="30">Status:</td>
+                            <td>
+                                Yes <input type="radio" name="rTrangthai" id="r1" value="1" checked> &nbsp;
+                                No <input type="radio" name="rTrangthai" id="r2" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+
+                        </tr>
+                    </table>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <input type="submit" name="button" id="button" value="Accept" class="btn btn-secondary" data-bs-dismiss="modal" style="background-color: darkseagreen">
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<script language="javascript">
+    var ckTomtat = CKEDITOR.replace('t4');
+    ckTomtat.config.width = 600;
+    CKFinder.setupCKEditor(ckTomtat, null, { type: 'Images' });
+
+    var ckNoidung = CKEDITOR.replace('t5');
+    ckNoidung.config.width = 600;
+    CKFinder.setupCKEditor(ckNoidung, null, { type: 'Images' });
+</script>

@@ -10,9 +10,9 @@ if($id!="" && is_numeric($id))
 	{	
 		$ketqua = $sanpham->XoaSanpham($id);
 		if($ketqua==FALSE)
-			$thongbao="Lỗi xóa dữ liệu";
+			$thongbao="Something went wrong";
 		else
-			$thongbao ="Xóa dữ liệu thành công";
+			$thongbao ="Deleted successfully";
 	}
 	else
 	{
@@ -20,12 +20,12 @@ if($id!="" && is_numeric($id))
 		if($ketqua==FALSE)
 		$thongbao="Lỗi xóa dữ liệu";
 		else
-		$thongbao ="Không xóa sản phẩm do Đã có  chi tiết hóa đơn liên quan
-					<br>Đã cập nhật sang trạng thái không hiển thị ";
+		$thongbao ="Can't deleted because someone has bought this product
+					<br>updated to not show ";
 	}
 }
 else
-	$thongbao ="Xóa dữ liệu lỗi id sản phẩm";
+	$thongbao ="Something went wrong";
 
 require("ViewsAdmin/vKetqua.php");
 ?>

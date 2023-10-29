@@ -18,10 +18,10 @@ try {
         require("ViewsAdmin/vKetqua.php");
     }
     else{
-        $thongbao ="Thêm dữ liệu thành công";
+        $thongbao ="Added data completed";
         require("ViewsAdmin/vKetqua.php");}
 }catch(Exception $e){
-    $thongbao = "Nhom san pham khong ton tai";
+    $thongbao = "Category not exist";
     require("ViewsAdmin/vKetqua.php");
 }
 ?>

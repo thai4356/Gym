@@ -5,8 +5,8 @@ if(isset($_REQUEST["rTrangthai"]))
     $trangthai = $_REQUEST["rTrangthai"];
 $ketqua = $Nhomsanpham->ThemNhomSanpham($tennhomsp, $trangthai);
 if($ketqua==FALSE)
-    $thongbao="Lỗi thêm dữ liệu";
+    $thongbao="Something wrong happened";
 else
-    $thongbao ="Thêm dữ liệu thành công";
+    $thongbao ="Added data completed";
     require("ViewsAdmin/vKetqua.php");;
 ?>

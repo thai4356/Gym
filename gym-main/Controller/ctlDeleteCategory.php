@@ -7,9 +7,9 @@ if($cat_id!="" && is_numeric($cat_id)){
     if($sp->data==NULL){ //nếu chưa có sản phẩm nào liên quan thì xóa
         $ketqua = $Nhomsanpham->XoaNhomSanpham($cat_id);
         if($ketqua==FALSE)
-            $thongbao="Lỗi xóa dữ liệu";
+            $thongbao="Something wrong happened";
         else
-            $thongbao ="Xóa dữ liệu thành công";
+            $thongbao ="Deleted data completed";
     }
 //    else{//có sản phẩm thuộc nhóm thì sửa trang thái về 0
 //        $ketqua = $Nhomsanpham->SuaTrangThaiSanpham($id,0);
@@ -21,7 +21,7 @@ if($cat_id!="" && is_numeric($cat_id)){
 //    }
 }
 else
-    $thongbao ="Xóa dữ liệu lỗi id sản phẩm";
+    $thongbao ="Something wrong happened";
 
 require ("ViewsAdmin/vKetqua.php")
 ?>

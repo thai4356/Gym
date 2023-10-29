@@ -13,7 +13,7 @@ if (isset($_REQUEST["id"]))
 $hoadon = new clsInVoice();
 //gọi các view và các Controllers cấp dưới dựa trên biến act
 if ($act == "xoa") {
-    require("xulyXoaHD.php");
+    require("ctlDeleteInvoice.php");
 } else if ($act == "trangthai") {
     require("ctlTrangthaiHD.php");
 } else if ($act == "chitiet") {
@@ -25,11 +25,11 @@ if ($act == "xoa") {
             $ketqua = $hoadon->ChitietHoadon($id);
             require("ViewsAdmin/vChitietHD.php");
         } else {
-            $thongbao = "HÓA ĐƠN KHÔNG TỒN TẠI";
+            $thongbao = "invoice not exist";
             require("Views/vKetqua.php");
         }
     } else {
-        $thongbao = "LỖI TRUY VẤN HÓA ĐƠN";
+        $thongbao = "Something wrong happened";
         require("Views/vKetqua.php");
     }
 } else { //hiển thị tất cả hóa đơn

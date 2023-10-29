@@ -13,7 +13,7 @@ $thongbao ="";
 
 if($act == "add"){
     if($masp=="" || is_numeric($masp)==false)
-        $thongbao = "id sản phẩm không hợp lệ";
+        $thongbao = "Something went wrong";
     else
     {
         if(isset($_SESSION["cart"][$masp])==true)//nếu sản phẩm có trong giỏ hàng
@@ -27,7 +27,7 @@ if($act == "add"){
             //thêm 1 phần tử có key là $masp và giá trị là 1 vào mảng cart
             $_SESSION["cart"][$masp] =1;
         }
-        $thongbao ="Đã thêm sản phẩm vào giỏ hàng";
+        $thongbao ="Added to cart";
         //header("location:index.php?module=cart");
     }
     require_once("ViewsUser/vCart.php");
@@ -45,7 +45,7 @@ else if($act == "del"){
         {
             unset($_SESSION["cart"][$masp]);
         }
-        $thongbao ="Đã xóa sản phẩm khỏi giỏ hàng";
+        $thongbao ="Deleted from cart";
         //header("location:index.php?module=cart");
     }
     require_once("ViewsUser/vCart.php");
@@ -53,7 +53,7 @@ else if($act == "del"){
 }
 else if($act == "update"){
     if(isset($_POST["capnhat"])==false)
-        $thongbao = "LỖI FORM UPDATE CART";
+        $thongbao = "Something went wrong";
     else
     {
         $qty = $_REQUEST["qty"];//lấy mảng các input có name="qty[x]"
@@ -65,7 +65,7 @@ else if($act == "update"){
             else
                 $_SESSION["cart"][$masp] = $soluong;
         }
-        $thongbao ="Đã cập nhật số lượng sản phẩm trong giỏ hàng";
+        $thongbao ="Update cart completed";
         //header("location:index.php?module=cart");//chuyển link sang trang cart
     }
     require_once("ViewsUser/vCart.php");

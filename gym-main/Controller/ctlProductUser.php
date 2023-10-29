@@ -21,13 +21,13 @@ else if($act == "sua"){//hiển thị form sửa sản phẩm
     require("ViewsAdmin/vUpdateProduct.php");
 }
 else if($act == "xoa"){
-    require("xulyXoaSP.php");
+    require("ctlDeleteProduct.php");
 }
 else if($act == "xulythem"){
     require("ctlAddProduct.php");
 }
 else if($act == "xulysua"){
-    require("xulySuaSP.php");}
+    require("ctlUpdateProduct.php");}
 else{ //tìm kiếm sản phẩm sản phẩm
     $ketqua = $sanpham->LayDanhSachSanpham(0,$cat_id,$tukhoa);
     require("ViewsUser/vProduct.php");

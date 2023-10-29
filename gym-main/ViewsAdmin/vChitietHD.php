@@ -1,39 +1,39 @@
 <div id="content_left" class="content_left">
     <div class="left1">
         <div class="topnav">
-        <h3>CHỨC NĂNG</h3>
-            <a href="?module=<?=$module?>">Danh sách Hóa đơn</a><a>|</a>
-            <a href="?module=<?=$module?>">Thống kê</a>
+        <h3 ><a href="?module=<?=$module?>">Back</a></h3>
+
         </div>
     </div>
 </div>
 <hr/>
 <div id="content_right" class="content_right">
-    <h1 style="margin-left: 2px"> DANH SÁCH HÓA ĐƠN</h1>
+    <h1 style="margin-left: 2px"> Order detail</h1>
     <div id="right_detail">
         <?php
         $trangthai="";
         if($rowHD["status"]==0)
-            $trangthai = "HĐ mới";
+            $trangthai = "Newly added";
         else if($rowHD["status"]==1)
-            $trangthai = "Đã duyệt";
+            $trangthai = "Confirmed";
         else if($rowHD["status"]==2)
-            $trangthai = "Đã Thanh toán";
+            $trangthai = "Payed";
         else if($rowHD["status"]==3)
-            $trangthai = "Tạm hủy";
+            $trangthai = "Cancelled temporary";
         ?>
-        <p> Mã hóa đơn: <b> <?=$id?> </b></p>
-        <p> Tên người mua: <b> <?=$rowHD["buyer"]?> </b></p>
-        <p> Địa chỉ :<b> <?=$rowHD["address"]?> </b></p>
-        <p> Điện thoại :<b> <?=$rowHD["phone"]?> </b></p>
-        <p> Ngày đặt :<b> <?=$rowHD["ngaydat"]?> </b></p>
-        <p> Trạng thái :<b> <?=$trangthai?> </b>
+        <p> Id: <b> <?=$id?> </b></p>
+        <p> Name: <b> <?=$rowHD["buyer"]?> </b></p>
+        <p> Address :<b> <?=$rowHD["address"]?> </b></p>
+        <p> Phone :<b> <?=$rowHD["phone"]?> </b></p>
+        <p> Order date :<b> <?=$rowHD["ngaydat"]?> </b></p>
+        <p> Status :<b> <?=$trangthai?> </b>
             <select name="sTT" id="sTT" onChange="sTT_Change(this.value);">
-                <option value=""> Đổi trạng thái HĐ</option>
-                <option value="0"> Hóa đơn mới</option>
-                <option value="1"> Hóa đơn đã duyệt</option>
-                <option value="2"> Hóa đơn đã thanh toán</option>
-                <option value="3"> Hóa đơn tạm hủy</option>
+                <option value=""> Update order status</option>
+                <option value="0"> Newly added</option>
+                <option value="1"> Confirmed</option>
+                <option value="2"> Payed</option>
+                <option value="3"> Cancelled</option>
+
             </select>
             <script>
                 function sTT_Change(new_value)
@@ -50,13 +50,13 @@
         <h3> Danh sách mặt hàng</h3>
         <table width="98%" border="1" class="Content_Table" cellpadding="0" cellspacing="0">
             <tr>
-                <td>STT</td>
-                <td>Mã SP</td>
-                <td>Tên sản phẩm</td>
-                <td>Tác giả</td>
-                <td> Giá mua</td>
-                <td>Số lượng</td>
-                <td>Thành tiền</td>
+                <td>id</td>
+                <td>product id</td>
+                <td>product name</td>
+                <td>brand</td>
+                <td>price</td>
+                <td>amount</td>
+                <td>total</td>
             </tr>
             <?php
             $rows = $hoadon->data;

@@ -12,13 +12,13 @@ if($chophep=="OK")
 {
     $ketqua = $hoadon->DoiTrangThaiHoadon($id,$ttmoi);
     if($ketqua==TRUE)
-        $thongbao = "CẬP NHẬT TRẠNG THÁI THÀNH CÔNG!";
+        $thongbao = "Updated invoice completed";
     else
-        $thongbao = "CẬP NHẬT TRẠNG THÁI LỖI!";
+        $thongbao = "Something went wrong";
 }
 else
 {
-    $thongbao = "Trạng thái cần chuyển không hợp lệ!";
+    $thongbao = "Status not valid";
 }
 require("ViewsAdmin/vKetqua.php");
 ?>
